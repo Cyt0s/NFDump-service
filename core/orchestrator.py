@@ -1,6 +1,7 @@
 from abc import ABC,abstractmethod
 
-class BaseOrchestrator(ABC):
+
+class Orchestrator(ABC):
     def __init__(self):
         pass
 

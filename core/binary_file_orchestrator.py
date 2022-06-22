@@ -1,7 +1,7 @@
-from base_orchestrator import BaseOrchestrator
+from orchestrator import Orchestrator
 
 
-class BinaryFileOrchestrator(BaseOrchestrator):
+class BinaryFileOrchestrator(Orchestrator):
     def __init__(self):
         super().__init__()
 

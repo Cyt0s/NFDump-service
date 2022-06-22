@@ -1,7 +1,9 @@
-from api.models.base_router import BaseRouter
+from api.models.router import Router
+from fastapi import APIRouter
 
 
-class FastApiRouter(BaseRouter):
+class FastApiRouter(Router):
+    router: APIRouter
 
-    def __init__(self, router, router_configuration: dict):
-        super().__init__(router, router_configuration)
+    class Config:
+        arbitrary_types_allowed = True

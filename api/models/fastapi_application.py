@@ -1,13 +1,12 @@
 from typing import List
 from fastapi import FastAPI
 from api.models.fastapi_router import FastApiRouter
-from api.models.base_application import BaseApplication
+from api.models.application import Application
 
 
-class FastApiApplication(BaseApplication):
+class FastApiApplication(Application):
 
     def __init__(self, routers: List[FastApiRouter]):
-        super().__init__(routers)
         self.application = FastAPI()
         for router in routers:
             self.add_router(router)

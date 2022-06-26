@@ -1,12 +1,13 @@
-from io_command_generator import IOCommandGenerator
+from core.parsers.command_generators.io_command_generator import IOCommandGenerator
 
 
 class NFDumpCommandGenerator(IOCommandGenerator):
     def __init__(self):
-        self.__command_list_example = ["nfdump", "-r", "-o", "csv", ">"]
+        self.__command_list_example = ["nfdump", "-r", "-o", "csv"]
 
     def generate_command(self, source: str, destination: str) -> list:
         command_list_replicate = self.__command_list_example.copy()
         command_list_replicate.insert(2, source)
-        command_list_replicate.append(destination)
+        #command_list_replicate.append(destination)
+        print(command_list_replicate)
         return command_list_replicate

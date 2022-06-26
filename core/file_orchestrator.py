@@ -1,5 +1,5 @@
 from abc import ABC,abstractmethod
-from models.file import File
+from core.models.file import File
 
 class FileOrchestrator(ABC):
     @abstractmethod

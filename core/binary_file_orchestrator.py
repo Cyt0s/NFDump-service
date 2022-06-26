@@ -1,7 +1,7 @@
-from file_orchestrator import FileOrchestrator
-from normalizers.normalizer import Normalizer
-from parsers.file_parser import FileParser
-from models.file import File
+from core.file_orchestrator import FileOrchestrator
+from core.normalizers.normalizer import Normalizer
+from core.parsers.file_parser import FileParser
+from core.models.file import File
 
 
 class BinaryFileOrchestrator(FileOrchestrator):

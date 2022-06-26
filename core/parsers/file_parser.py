@@ -1,5 +1,5 @@
-from abc import ABC,abstractmethod
-from ..models.file import File
+from abc import ABC, abstractmethod
+from core.models.file import File
 
 
 class FileParser(ABC):

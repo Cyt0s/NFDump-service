@@ -1,7 +1,8 @@
 from abc import ABC,abstractmethod
+from core.models.flow_object import FlowObject
 
 
 class Normalizer(ABC):
     @abstractmethod
-    def normalize(self): #I will add the model
+    def normalize(self, parsed_object: FlowObject):
         pass

@@ -6,9 +6,10 @@ from core.models.file import File
 
 class BinaryFileOrchestrator(FileOrchestrator):
     def __init__(self, normalizer: Normalizer, parser: FileParser):
-        self.normalizer = normalizer
-        self.parser = parser
+        self.__normalizer = normalizer
+        self.__parser = parser
 
     def orchestrate(self, file: File):
-        parsed_object = self.parser.parse(file)
-        normalizer = self.normalizer.normalize()
+        parsed_object = self.__parser.parse(file)
+        normalized_object = self.__normalizer.normalize(parsed_object)
+        print(normalized_object.data.head())

@@ -1,4 +1,4 @@
-from configuration_reader import ConfigurationReader
+from configurations.configuration_reader import ConfigurationReader
 import yaml
 
 

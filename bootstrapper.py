@@ -25,6 +25,7 @@ class Bootstrapper:
         self.__routers = []
         self.__conf_path = conf_path
 
+
     def bootstrap(self):
         global orchestrator
         configuration_dict = YamlConfigurationReader(self.__conf_path).read_configuration()
